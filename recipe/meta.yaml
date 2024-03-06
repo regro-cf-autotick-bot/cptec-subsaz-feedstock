@@ -1,5 +1,5 @@
 {% set name = "cptec-subsaz" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cptec-subsaz-{{ version }}.tar.gz
-  sha256: b5bf08c0359ef827fd180a50e684452a4adf2656f6622fea515198e60d5dc085
+  sha256: ac0f03a9afe61f473384efff1b79cca07aac2d6febb3619b0309d32cf721148b
 
 build:
   noarch: python
@@ -25,8 +25,9 @@ requirements:
     - xarray
     - requests
     - matplotlib-base
+    - scipy
     - netcdf4
-
+    
 test:
   imports:
     - subsaz
