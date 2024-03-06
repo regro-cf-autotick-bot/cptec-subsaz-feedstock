@@ -43,6 +43,7 @@ about:
   summary: Módulo para distribuição do Modelo SubSazonal do CPTEC.
   license: MIT
   license_file: LICENSE.txt
+  
 
 extra:
   recipe-maintainers:
