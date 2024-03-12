@@ -1,5 +1,5 @@
 {% set name = "cptec-subsaz" %}
-{% set version = "0.0.14" %}
+{% set version = "0.0.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cptec-subsaz-{{ version }}.tar.gz
-  sha256: 2c10e6814ef03b8877335a6a9f89d0870bdf7cb7393b05b8521c7a4f5f0b7891
-
+  sha256: 8b6eae2c422f7cc5ffbc74ace11fbeb9a86a0782f8b06fe55a4e109d77070ed9
+  
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
