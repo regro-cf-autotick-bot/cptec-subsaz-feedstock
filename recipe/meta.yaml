@@ -1,5 +1,5 @@
 {% set name = "cptec-subsaz" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cptec-subsaz-{{ version }}.tar.gz
-  sha256: 9dd879f966d5a26938266316021493753823845ee88e078da09aa0852282af02
-  
+  sha256: 7e4668662a0ba70b8b4e073e0f2c75051a40566ddfe7730e60ebb4d0776461bd
+
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -27,7 +27,7 @@ requirements:
     - matplotlib-base
     - scipy
     - netcdf4
-    
+
 test:
   imports:
     - subsaz
@@ -43,7 +43,7 @@ about:
   summary: Módulo para distribuição do Modelo SubSazonal do CPTEC.
   license: MIT
   license_file: LICENSE.txt
-  
+
 
 extra:
   recipe-maintainers:
