@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "cptec-subsaz" %}
 {% set version = "0.0.17" %}
 
@@ -6,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cptec-subsaz-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cptec-subsaz-{{ version }}.tar.gz
   sha256: 9dd879f966d5a26938266316021493753823845ee88e078da09aa0852282af02
   
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - pandas
     - xarray
@@ -35,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://sazonal.readthedocs.io/en/latest/index.html
